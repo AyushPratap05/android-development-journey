@@ -1,0 +1,28 @@
+Q1: What is NullPointerException? How does Kotlin prevent it?
+A : NPE occurs when you access a null reference. Kotlin
+    prevents it by making types non-nullable by default.
+    You must explicitly mark nullable types with ?.
+
+Q2: What is difference between ?. and !!?
+A : ?. (safe call) - skips operation if null, returns null
+    !! (not-null assertion) - forces operation, crashes if null
+    Always prefer ?. over !!
+
+Q3: What is let in Kotlin? When to use it?
+A : let executes a block only if object is not null.
+    val name: String? = "Ayush"
+    name?.let { println(it.uppercase()) }
+    Used to safely operate on nullable values.
+
+Q4: What is when expression in Kotlin?
+A : when is Kotlin's replacement for switch statement.
+    It's more powerful - supports ranges, types, conditions.
+    It's an expression so it returns a value.
+
+Q5: Difference between break and continue?
+A : break  - exits the loop completely
+    continue - skips current iteration, continues loop
+
+Q6: What is do-while loop?
+A : Loop that executes at least once before checking condition.
+    do { code } while(condition)

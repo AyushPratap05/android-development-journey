@@ -1,0 +1,36 @@
+Q1 : What is difference between val and var?
+A  : val is immutable (cannot reassign), var is mutable (can reassign)
+     Always prefer val for safety and readability.
+
+Q2 : What does readLine() return in Kotlin?
+A  : It returns String? (nullable String). It can be null
+     if there is no input, so always handle with ?: operator.
+
+Q3 : What is Elvis operator (?:)?
+A  : Provides default value when expression is null.
+     Example: val name = readLine() ?: "Guest"
+
+Q4 : What is the difference between toInt() and toIntOrNull()?
+A  : toInt() crashes if string is not a valid number.
+     toIntOrNull() returns null instead of crashing. Always
+     use toIntOrNull() for user input.
+
+Q5 : What is String template in Kotlin?
+A  : Embedding variables/expressions directly in strings
+     using $ for variables and ${} for expressions.
+     Example: "Hello $name, age: ${age + 1}"
+
+Q6 : What is type inference in Kotlin?
+A  : Kotlin automatically detects variable type from value.
+     val name = "Ayush" → Kotlin knows it's String.
+     No need to write val name: String = "Ayush"
+
+Q7 : How is if/else different in Kotlin?
+A  : In Kotlin, if/else is an expression that returns a value.
+     val result = if (score > 35) "Pass" else "Fail"
+     In Java, if/else is only a statement.
+
+Q8 : Why use .gitignore?
+A  : To prevent unnecessary files (compiled files, IDE files,
+     OS files) from being tracked by Git. Keeps repo clean
+     and professional.
