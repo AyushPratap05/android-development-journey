@@ -21,7 +21,7 @@ to become a professional Android + ML Developer.
 | Day | Topic | Project | Status |
 |-----|-------|---------|--------|
 | Day 01 | Kotlin Basics | Interactive Profile Card App | ✅ Done |
-| Day 02 | Null Safety + Data Types | Smart Input Validator | ⏳ Soon |
+| Day 02 | Null Safety + Data Types | Smart Input Validator |  ✅ Done  |
 | Day 03 | OOP in Kotlin | Library Management System | ⏳ Soon |
 | Day 04 | Collections and Lambdas | Student Result Processor | ⏳ Soon |
 | Day 05 | Coroutines | Async Weather Fetcher | ⏳ Soon |
