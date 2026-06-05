@@ -1,0 +1,70 @@
+fun main() {
+
+    // ─────────────────────────────────────────
+    // LET - Execute block only if not null
+    // Most commonly used with nullable types
+    // ─────────────────────────────────────────
+    val name: String? = "Ayush"
+
+    // Without let (old way)
+    if (name != null) {
+        println(name.uppercase())
+    }
+
+    // With let (Kotlin way ✅)
+    name?.let {
+        println(it.uppercase())     // it = the non-null value
+        println(it.length)
+    }
+
+    // Real use case - process input only if not null
+    val userInput: String? = readLine()
+    userInput?.let {
+        println("You entered: $it")
+        println("Length: ${it.length}")
+    } ?: println("No input provided")
+
+    // ─────────────────────────────────────────
+    // APPLY - Configure an object
+    // Returns the object itself
+    // ─────────────────────────────────────────
+
+    // Without apply
+    val person1 = Person()
+    person1.name = "Ayush"
+    person1.age = 23
+    person1.city = "Delhi"
+
+    // With apply ✅ (cleaner)
+    val person2 = Person().apply {
+        name = "Ayush"      // this.name (no need to write this)
+        age  = 23
+        city = "Delhi"
+    }
+
+    // ─────────────────────────────────────────
+    // ALSO - Do extra action, return same object
+    // Good for logging/debugging
+    // ─────────────────────────────────────────
+    val numbers = mutableListOf(1, 2, 3)
+        .also { println("Original list: $it") }    // Log it
+        .also { it.add(4) }                         // Modify it
+
+    println(numbers)    // [1, 2, 3, 4]
+
+    // ─────────────────────────────────────────
+    // RUN - Execute block, return result
+    // ─────────────────────────────────────────
+    val greeting = "Ayush".run {
+        val upper = this.uppercase()
+        "Hello $upper!"         // Returns this value
+    }
+    println(greeting)           // Hello AYUSH!
+}
+
+// Simple data class for examples
+data class Person(
+    var name: String = "",
+    var age: Int = 0,
+    var city: String = ""
+)
